@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <classPathEntry location="C:\Users\Root\.m2\repository\mysql\mysql-connector-java\8.0.18\mysql-connector-java-8.0.18.jar" /> 
+
+  <context id="DB2Tables" targetRuntime="MyBatis3">
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+        connectionURL="jdbc:mysql://localhost:3306/booksales?Characterencoding=utf8&amp;serverTimezone=UTC"
+        userId="root"
+        password="ROOT">
+    </jdbcConnection>
+
+    <javaTypeResolver >
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+
+    <javaModelGenerator targetPackage="jjm.learn.book.sale.POJO" targetProject="book.sale/src/main/java">
+      <property name="enableSubPackages" value="true" />
+      <property name="trimStrings" value="true" />
+    </javaModelGenerator>
+
+    <sqlMapGenerator targetPackage="mapping"  targetProject="book.sale/src/main/resource">
+      <property name="enableSubPackages" value="true" />
+    </sqlMapGenerator>
+
+    <javaClientGenerator type="XMLMAPPER" targetPackage="jjm.learn.book.sale.mapper"  targetProject="book.sale/src/main/java">
+      <property name="enableSubPackages" value="true" />
+    </javaClientGenerator>
+
+    <table tableName="owerinfo" domainObjectName="OwnerInformationPOJO" >
+    </table>
+    
+    <table tableName="ownerpwd" domainObjectName="OwnerPassWordPOJO" >
+    </table>
+
+  </context>
+</generatorConfiguration>
