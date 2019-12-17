@@ -35,6 +35,14 @@ public class FileDownload extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		System.out.println("servletPath:"+request.getServletPath());
+		System.out.println("contextPath:"+request.getContextPath());
+		System.out.println("contextPath2:"+request.getServletContext().getContextPath());
+		System.out.println("pageInfo:"+request.getPathInfo());
+		System.out.println("uri:"+request.getRequestURI());
+		System.out.println("url:"+request.getRequestURL());
+		System.out.println("realPath:"+request.getServletContext().getRealPath("/"));
+		
 		// get the path for downloading files
 		String path = getServletContext().getRealPath("/") + "files/";
 		String filename = request.getParameter("filename");
