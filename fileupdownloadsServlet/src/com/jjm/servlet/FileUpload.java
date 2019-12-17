@@ -42,7 +42,14 @@ public class FileUpload extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-
+		System.out.println("servletPath:"+request.getServletPath());
+		System.out.println("contextPath:"+request.getContextPath());
+		System.out.println("contextPath2:"+request.getServletContext().getContextPath());
+		System.out.println("pageInfo:"+request.getPathInfo());
+		System.out.println("uri:"+request.getRequestURI());
+		System.out.println("url:"+request.getRequestURL());
+		System.out.println("realPath:"+request.getServletContext().getRealPath("/"));
+		
 		// fetch stream data from request
 		InputStream fileSource = request.getInputStream();
 		String tempFileName = "D:/tempDirection";
