@@ -1,4 +1,4 @@
-how to make sure the update of file '.gitignore' is realized?
+how to make sure the update of file '.gitignore' is realized? not working!!!
 
 empty the cache:
 git rm -r --cached
