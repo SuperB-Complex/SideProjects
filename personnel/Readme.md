@@ -30,7 +30,6 @@ personnel
 								mapper
 									OwnerInformationPOJOMapper.java -- CRUD
 									OwnerPassWordPOJOMapper.java -- CRUD
-
 			resource
 				mapping -- auto-generate
 					OwnerInformationPOJOMapper.xml
