@@ -1,0 +1,12 @@
+how to delete both in local and remote?
+
+first deleting the local code;
+
+then:
+git add .
+
+then:
+git commit -m "deleting unnecessary files"
+
+then:
+git push 

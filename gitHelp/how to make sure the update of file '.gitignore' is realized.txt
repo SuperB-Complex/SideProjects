@@ -1,0 +1,9 @@
+how to make sure the update of file '.gitignore' is realized?
+
+empty the cache:
+git rm -r --cached
+parameter '-r' means recursion
+
+git commit -m "update.gitignore"
+
+git push origin master
