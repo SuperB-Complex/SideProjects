@@ -1,0 +1,25 @@
+how to add your local project into github's repository?
+
+this respository if not exist, you should create it first. Or you can add your prlject into your current repository.
+
+assuming the url of this repository:
+https://github.com/xxx/xxxx
+
+cd to your folder containing your project:
+git init
+this command will create a file named '.git'; 
+
+then:
+git add .
+this command adding all files in this folder into a staging area kind of like a caching area;
+
+then:
+git commit -m "***"
+
+then:
+git remote add origin https://github.com/xxx/xxxx
+
+then:
+git push -u origin master
+the parameter '-u' is representing upStream, it is must create this upStream and this upStream is only requested at the first time when you push the code;
+

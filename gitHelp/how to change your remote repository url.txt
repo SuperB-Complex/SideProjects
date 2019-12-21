@@ -1,0 +1,11 @@
+how to change your remote repository url?
+
+checking your current url:
+git remote -v
+
+assuming the new url looks like:
+git@github.com:xxxx/sssss.git
+
+changing your url:
+git remote set-url origin git@github.com:SuperB-Complex/SideProjects.git
+
