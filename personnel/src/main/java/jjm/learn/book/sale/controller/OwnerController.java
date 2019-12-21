@@ -22,14 +22,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.http.HttpStatus;
-
+// name the controller
 @Controller("owner")
+// set url requesting path
 @RequestMapping("/owner")
 public class OwnerController extends BaseController {
 	
 	@Autowired
 	private OwnerService ownerService;
 
+	// http://localhost:8080/owner/get?id=1
 	@RequestMapping("/get")
 	@ResponseBody
 	public GeneralReturnType getUser(@RequestParam(name="id") Integer id) throws BusinessException {
@@ -40,6 +42,7 @@ public class OwnerController extends BaseController {
 			throw new BusinessException(EnumBusinessError.USER_NOT_EXIST);
 		}
 		
+		// {"status":"success","data":{"id":1,"name":"xxx","sex":"F","phonenumber":"123456789"}}
 		return GeneralReturnType.create(convertFromModel(ownerModel));
 	}
 	
